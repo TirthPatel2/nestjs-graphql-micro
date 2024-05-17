@@ -16,6 +16,10 @@ import { authContext } from './auth.context';
       gateway: {
         supergraphSdl: new IntrospectAndCompose({
           subgraphs: [
+            // You can get data from .env like users port and posts port
+            // so add url like this
+            //`${HOST_URL}:${USER_SERVICE_PORT}/graphql`
+            //`${HOST_URL}:${POST_SERVICE_PORT}/graphql`
             { name: 'users', url: 'http://localhost:8001/graphql' },
             { name: 'posts', url: 'http://localhost:8002/graphql' },
           ],
